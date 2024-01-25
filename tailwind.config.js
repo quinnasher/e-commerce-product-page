@@ -30,6 +30,9 @@ module.exports = {
       translate: {
         customTranslate: "",
       },
+      fontSize: {
+        0.5: "0.7rem",
+      },
     },
   },
   plugins: [],
