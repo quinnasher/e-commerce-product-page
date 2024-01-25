@@ -10,6 +10,10 @@
     animation: squich 200ms ease-in-out;
   }
 
+  .lg-btn {
+    @apply rounded-2xl bg-orange w-full h-12 font-700 flex items-center justify-center text-paleOrange;
+  }
+
   @keyframes squich {
     50% {
       scale: 0.4 0.6;
