@@ -4,9 +4,8 @@ import imageAvatar from "./images/image-avatar.png";
 import logo from "./images/logo.svg";
 import closeIcon from "./images/icon-close.svg";
 import { useState } from "react";
-function Header() {
+function Header({ cartCount }) {
   const [hide, setHide] = useState("hidden");
-  const [cartCount, setCardCount] = useState(0);
   function openNav() {
     setHide("");
   }
@@ -28,14 +27,14 @@ function Header() {
           </button>
           <button
             onClick={closeNav}
-            className={`z-30 w-20 left-4 absolute ${hide}`}
+            className={`w-20 left-4 absolute z-50 ${hide}`}
           >
             <img className={"md:hidden object-cover"} src={closeIcon} alt="" />
           </button>
           <img className={"w-full"} src={logo} alt="logo" />
         </div>
         <nav
-          className={`bg-white ${hide} h-screen  w-3/5 absolute bottom-0 top-0 left-0 p-4 md:block md:p-0 md:h-full md:w-full  md:relative  md:ml-16`}
+          className={`bg-white ${hide} z-30 h-screen  w-60% absolute bottom-0 top-0 left-0 p-4 md:block md:p-0 md:h-full md:w-full  md:relative  md:ml-16`}
         >
           <ul
             className={
@@ -73,7 +72,7 @@ function Header() {
               cartCount > 0 ? "" : "hidden"
             } w-5 h-3 bg-orange  rounded-full absolute left-2 top-0.5 text-white  text-0.5 flex items-center justify-center`}
           >
-            3
+            {cartCount}
           </span>
         </div>
       </header>

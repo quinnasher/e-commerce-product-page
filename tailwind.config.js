@@ -25,6 +25,7 @@ module.exports = {
         "375px": "375px",
         "360px": "360px",
         "328px": "328px",
+        "60%": "60%",
 
         "1200px": "1200px",
         "1000px": "1000px",
@@ -33,6 +34,10 @@ module.exports = {
       height: {
         "255px": "255px",
         "175px": "175px",
+        "300px": "300px",
+      },
+      inset: {
+        "72px": "72px",
       },
 
       translate: {

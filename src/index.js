@@ -4,15 +4,16 @@ import "./index.css";
 import Header from "./components/Header";
 import reportWebVitals from "./reportWebVitals";
 import Product from "./components/Product";
-import Cart from "./components/Cart";
-import cart from "./components/Cart";
-
+import CartCheckout from "./components/CartCheckout";
+import cart from "./components/CartCheckout";
+import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/*<Header />*/}
     {/*<Product />*/}
-    {<Cart />}
+    {/*{<CartCheckout />}*/}
+    <App />
   </React.StrictMode>,
 );
 

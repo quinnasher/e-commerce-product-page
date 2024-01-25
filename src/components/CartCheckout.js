@@ -2,15 +2,24 @@ import shoe from "./images/image-product-1.jpg";
 import trash from "./images/icon-delete.svg";
 import { useEffect, useState } from "react";
 
-function Cart({ cartCount, setCartCount }) {
-  // setCartCount(3);
-  cartCount = 4;
-  const [price, setPrice] = useState(125);
-  const [total, setTotal] = useState(cartCount * price);
+function CartCheckout({ cartCount, updateCartCount, price, total }) {
+  // const [price, setPrice] = useState(125);
+  // const [total, setTotal] = useState(Number(cartCount) * price);
+
+  // useEffect(() => {
+  //   // Recalculate total whenever cartCount or price changes
+  //   setTotal(Number(cartCount) * price);
+  // }, [cartCount, price]);
+
+  function clearCart() {
+    updateCartCount(0);
+  }
 
   return (
-    <div>
-      <section className={"w-360px h-255px mx-auto shadow-lg"}>
+    <div className={""}>
+      <section
+        className={"bg-white rounded-lg w-360px h-255px mx-auto shadow-lg"}
+      >
         <span
           className={
             "text-veryDarkBlue text-xl ml-4 font-700 capitalize  h-20 flex items-center"
@@ -30,8 +39,12 @@ function Cart({ cartCount, setCartCount }) {
           </p>
         </div>
 
-        {/*  Cart Container*/}
-        <div className={"flex flex-col gap-7 w-328px mx-auto mt-6"}>
+        {/*  CartCheckout Container*/}
+        <div
+          className={`${
+            cartCount > 0 ? "" : "hidden"
+          } flex flex-col gap-7 w-328px mx-auto mt-6`}
+        >
           <div className={"flex justify-between items-center"}>
             <div>
               <img className={"w-12 rounded-lg"} src={shoe} alt="" />
@@ -39,13 +52,11 @@ function Cart({ cartCount, setCartCount }) {
             <div className={"text-grayishBlue"}>
               <p>Fall Limited Edition Sneakers</p>
               <p className={"tracking-wider"}>
-                ${price.toFixed(2)} x {cartCount}{" "}
-                <span className={"font-700 text-black"}>
-                  ${total.toFixed(2)}
-                </span>
+                ${price} x {cartCount}{" "}
+                <span className={"font-700 text-black"}>${total}</span>
               </p>
             </div>
-            <button>
+            <button onClick={clearCart}>
               <img src={trash} alt="" />
             </button>
           </div>
@@ -57,4 +68,4 @@ function Cart({ cartCount, setCartCount }) {
   );
 }
 
-export default Cart;
+export default CartCheckout;
