@@ -15,10 +15,12 @@ function CartCheckout({ cartCount, updateCartCount, price, total }) {
     updateCartCount(0);
   }
 
+  function hideCheckout() {}
+
   return (
     <div className={""}>
       <section
-        className={"bg-white rounded-lg w-360px h-255px mx-auto shadow-lg"}
+        className={"bg-white rounded-lg w-full h-255px mx-auto shadow-lg"}
       >
         <span
           className={
@@ -43,7 +45,7 @@ function CartCheckout({ cartCount, updateCartCount, price, total }) {
         <div
           className={`${
             cartCount > 0 ? "" : "hidden"
-          } flex flex-col gap-7 w-328px mx-auto mt-6`}
+          } flex flex-col gap-7 w-90% mx-auto mt-6`}
         >
           <div className={"flex justify-between items-center"}>
             <div>

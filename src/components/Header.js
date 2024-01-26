@@ -4,8 +4,11 @@ import imageAvatar from "./images/image-avatar.png";
 import logo from "./images/logo.svg";
 import closeIcon from "./images/icon-close.svg";
 import { useState } from "react";
-function Header({ cartCount }) {
+import cartCheckout from "./CartCheckout";
+import CartCheckout from "./CartCheckout";
+function Header({ cartCount, updateCartCount, price, total }) {
   const [hide, setHide] = useState("hidden");
+  const [hideCheckout, setHideCheckout] = useState(true);
   function openNav() {
     setHide("");
   }
@@ -14,10 +17,14 @@ function Header({ cartCount }) {
     setHide("hidden");
   }
 
+  const toggleHideCheckout = () => {
+    setHideCheckout(!hideCheckout);
+  };
+
   return (
     <div
       className={
-        "bg-white   font-700 w-375px md:w-1000px md:px-0 px-4 py-4 mx-auto "
+        "bg-white   font-700 w-375px md:w-1000px md:px-0 px-4 py-4 mx-auto relative"
       }
     >
       <header className={"flex justify-between items-center"}>
@@ -59,8 +66,10 @@ function Header({ cartCount }) {
           </ul>
         </nav>
 
-        <div className="flex gap-4 md:gap-6 relative">
-          <img className={"object-contain"} src={cartIcon} alt="cart Icon" />
+        <div className="flex gap-4 md:gap-6 relative md:w-28">
+          <button onClick={toggleHideCheckout}>
+            <img className={"object-contain"} src={cartIcon} alt="cart Icon" />
+          </button>
           <img
             className={"object-contain w-8 mr-4 md:mr-0"}
             src={imageAvatar}
@@ -79,6 +88,20 @@ function Header({ cartCount }) {
       <div
         className={" max-sm:hidden w-full bg-lightGrayishBlue h-0.5 mt-4"}
       ></div>
+
+      {/*  Checkout pop up*/}
+      <div
+        className={`${
+          hideCheckout ? "hidden" : ""
+        } z-10 absolute top-72px left-0 right-0 mx-auto md:left-[750px] w-360px md:w-328px`}
+      >
+        <CartCheckout
+          cartCount={cartCount}
+          updateCartCount={updateCartCount}
+          price={price.toFixed(2)}
+          total={total.toFixed(2)}
+        />
+      </div>
     </div>
   );
 }

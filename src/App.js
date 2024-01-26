@@ -5,10 +5,15 @@ import { useState } from "react";
 import Product from "./components/Product";
 
 function App() {
-  const [cartCount, setCartCount] = useState(5);
+  const [cartCount, setCartCount] = useState(0);
   const [discountPrice, setDiscountPrice] = useState(125);
-  const [total, setTotal] = useState(discountPrice * cartCount);
   const [initialPrice, setInitialPrice] = useState(250);
+  const [discountPriceTotal, setDiscountPriceTotal] = useState(
+    discountPrice * cartCount,
+  );
+  const [initialPriceTotal, setInitialPriceTotal] = useState(
+    initialPrice * discountPrice,
+  );
   const [discount, setDiscount] = useState(50);
 
   // Fix the function name here
@@ -20,23 +25,30 @@ function App() {
     setInitialPrice(newPrice);
   }
 
-  function updateDiscountPrice(newDiscountPrice) {
-    setDiscount(newDiscountPrice);
+  function updateDiscountPrice(newPrice) {
+    setDiscount(newPrice);
+  }
+
+  function updateDiscountPriceTotal(newTotal) {
+    setDiscountPriceTotal(newTotal);
+  }
+
+  function updateInitialPriceTotal(newTotal) {
+    setInitialPriceTotal(newTotal);
   }
 
   return (
     <div>
-      {/*<Header cartCount={cartCount} />*/}
-      <div className={"relative"}>{/*<Product />*/}</div>
+      <Header
+        cartCount={cartCount}
+        updateCartCount={updateCartCount}
+        total={discountPriceTotal}
+        price={discountPrice}
+      />
+      <div className={"relative"}>
+        <Product />
+      </div>
       <div className={"w-328px md:w-430px mx-auto"}>
-        {/*<div className={"absolute top-72px left-0 right-0"}>*/}
-        {/*  <CartCheckout*/}
-        {/*    cartCount={cartCount}*/}
-        {/*    updateCartCount={updateCartCount}*/}
-        {/*    price={discountPrice.toFixed(2)}*/}
-        {/*    total={total.toFixed(2)}*/}
-        {/*  />*/}
-        {/*</div>*/}
         <AddToCart
           cartCount={cartCount}
           updateCartCount={updateCartCount}
@@ -46,6 +58,8 @@ function App() {
           updateDiscountPrice={updateDiscountPrice}
           updateInitialPrice={updateInitialPrice}
           updateDiscount={updateInitialPrice}
+          updateDiscountPriceTotal={updateDiscountPriceTotal}
+          updateInitialPriceTotal={updateInitialPriceTotal}
         />
       </div>
     </div>
