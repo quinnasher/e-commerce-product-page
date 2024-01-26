@@ -4,7 +4,6 @@ import imageAvatar from "./images/image-avatar.png";
 import logo from "./images/logo.svg";
 import closeIcon from "./images/icon-close.svg";
 import { useState } from "react";
-import cartCheckout from "./CartCheckout";
 import CartCheckout from "./CartCheckout";
 function Header({ cartCount, updateCartCount, price, total }) {
   const [hide, setHide] = useState("hidden");

@@ -3,6 +3,7 @@ import CartCheckout from "./components/CartCheckout";
 import AddToCart from "./components/AddToCart";
 import { useState } from "react";
 import Product from "./components/Product";
+import ProductContent from "./components/ProductContent";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -45,10 +46,14 @@ function App() {
         total={discountPriceTotal}
         price={discountPrice}
       />
-      <div className={"relative"}>
+      <div className={"mb-4"}>
         <Product />
       </div>
       <div className={"w-328px md:w-430px mx-auto"}>
+        <div className={"mb-6"}>
+          <ProductContent />
+        </div>
+
         <AddToCart
           cartCount={cartCount}
           updateCartCount={updateCartCount}
