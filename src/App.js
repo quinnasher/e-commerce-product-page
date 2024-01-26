@@ -46,26 +46,32 @@ function App() {
         total={discountPriceTotal}
         price={discountPrice}
       />
-      <div className={"mb-4"}>
-        <Product />
-      </div>
-      <div className={"w-328px md:w-430px mx-auto"}>
-        <div className={"mb-6"}>
-          <ProductContent />
+      <div
+        className={
+          "mt-12 mx-auto md:w-900px flex flex-col max-sm:justify-center md:gap-24 items-center md:flex-row"
+        }
+      >
+        <div className={"mb-4"}>
+          <Product />
         </div>
+        <div className={"w-328px md:w-430px"}>
+          <div className={"mb-6"}>
+            <ProductContent />
+          </div>
 
-        <AddToCart
-          cartCount={cartCount}
-          updateCartCount={updateCartCount}
-          discountPrice={discountPrice.toFixed(2)}
-          initialPrice={initialPrice.toFixed(2)}
-          discount={discount}
-          updateDiscountPrice={updateDiscountPrice}
-          updateInitialPrice={updateInitialPrice}
-          updateDiscount={updateInitialPrice}
-          updateDiscountPriceTotal={updateDiscountPriceTotal}
-          updateInitialPriceTotal={updateInitialPriceTotal}
-        />
+          <AddToCart
+            cartCount={cartCount}
+            updateCartCount={updateCartCount}
+            discountPrice={discountPrice.toFixed(2)}
+            initialPrice={initialPrice.toFixed(2)}
+            discount={discount}
+            updateDiscountPrice={updateDiscountPrice}
+            updateInitialPrice={updateInitialPrice}
+            updateDiscount={updateInitialPrice}
+            updateDiscountPriceTotal={updateDiscountPriceTotal}
+            updateInitialPriceTotal={updateInitialPriceTotal}
+          />
+        </div>
       </div>
     </div>
   );

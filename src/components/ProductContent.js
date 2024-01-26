@@ -10,7 +10,7 @@ function ProductContent() {
       </h1>
       <h2
         className={
-          "text-veryDarkBlue text-2xl tracking-wider capitalize font-700 mb-5"
+          "text-veryDarkBlue text-2xl tracking-wide capitalize font-700 mb-5"
         }
       >
         Fall limited edition sneakers
