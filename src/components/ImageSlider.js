@@ -22,12 +22,12 @@ function ImageSlider({ imageUrl, thumbnailUrl }) {
     <div className={"w-full h-full relative overflow-hidden"}>
       <div
         style={{ transform: `translateX(${-100 * imageIndex}%)` }}
-        className={"w-full h-full flex transition duration-200 "}
+        className={"w-full h-full flex transition duration-200 md:rounded-xl"}
       >
         {imageUrl.map((url) => (
           <img
             // className={`transform translate[${-100 * imageIndex}%]`}
-            className={`w-full h-full block flex-shrink-0 flex-grow-0 md:rounded-2xl`}
+            className={`w-full h-300px block flex-shrink-0 flex-grow-0 md:rounded-2xl`}
             src={url}
             key={url}
             alt=""
@@ -64,7 +64,7 @@ function ImageSlider({ imageUrl, thumbnailUrl }) {
               {
                 <img
                   key={url}
-                  className={"w-full object-contain rounded-2xl block"}
+                  className={"w-full object-contain rounded-xl block"}
                   src={url}
                   alt=""
                 />

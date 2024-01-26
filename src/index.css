@@ -11,7 +11,7 @@
   }
 
   .lg-btn {
-    @apply rounded-2xl bg-orange w-full h-12 font-700 flex items-center justify-center text-paleOrange;
+    @apply rounded-2xl bg-orange w-full shadow-lg h-12 font-700 flex items-center justify-center text-paleOrange;
   }
 
   @keyframes squich {
