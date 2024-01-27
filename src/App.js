@@ -48,7 +48,7 @@ function App() {
       />
       <div
         className={
-          "mt-12 mx-auto md:w-900px flex flex-col max-sm:justify-center md:gap-24 items-center md:flex-row"
+          "md:mt-12 mx-auto md:w-900px flex flex-col max-sm:justify-center md:gap-24 items-center md:flex-row"
         }
       >
         <div className={"mb-4"}>

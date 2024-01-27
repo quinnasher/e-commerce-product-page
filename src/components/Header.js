@@ -92,7 +92,7 @@ function Header({ cartCount, updateCartCount, price, total }) {
       <div
         className={`${
           hideCheckout ? "hidden" : ""
-        } z-10 absolute top-72px left-0 right-0 mx-auto md:left-[750px] w-360px md:w-328px`}
+        } z-10 absolute top-18 left-0 right-0 mx-auto md:left-[750px] w-360px md:w-328px`}
       >
         <CartCheckout
           cartCount={cartCount}

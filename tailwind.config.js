@@ -42,7 +42,9 @@ module.exports = {
         "300px": "300px",
       },
       inset: {
-        "72px": "72px",
+        "120px": "120px",
+        "172px": "172px",
+        18: "4.5rem",
       },
 
       gap: {
