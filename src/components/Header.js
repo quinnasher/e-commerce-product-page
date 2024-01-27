@@ -40,7 +40,7 @@ function Header({ cartCount, updateCartCount, price, total }) {
           <img className={"w-full"} src={logo} alt="logo" />
         </div>
         <nav
-          className={`bg-white ${hide} z-30 h-screen  w-60% absolute bottom-0 top-0 left-0 p-4 md:block md:p-0 md:h-full md:w-full  md:relative  md:ml-16`}
+          className={`bg-white ${hide} z-30 h-screen  w-60% md:text-sm absolute bottom-0 top-0 left-0 p-4 md:block md:p-0 md:h-full md:w-full  md:relative  md:ml-4`}
         >
           <ul
             className={
