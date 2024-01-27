@@ -63,7 +63,7 @@ function AddToCart({
         >
           <div
             className={
-              "flex gap-10  md:gap-8 tracking-widest md:tracking-normal "
+              "flex gap-10  md:gap-5 tracking-widest md:tracking-normal "
             }
           >
             <span className={"font-700  text-2xl"}>

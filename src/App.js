@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={"mt-4"}>
       <Header
         cartCount={cartCount}
         updateCartCount={updateCartCount}

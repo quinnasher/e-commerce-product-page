@@ -54,10 +54,10 @@ function ImageSlider({ imageUrl, thumbnailUrl }) {
         </button>
       </div>
       <div>
-        <div className={"hidden md:flex md:gap-4 md:mt-4"}>
+        <div className={"hidden md:flex justify-between md:gap-4 md:mt-4"}>
           {thumbnailUrl.map((url, index) => (
             <button
-              className={"w-full"}
+              className={"w-16 hover:opacity-75"}
               key={index}
               onClick={() => setImageIndex(index)}
             >

@@ -45,6 +45,9 @@ module.exports = {
         "72px": "72px",
       },
 
+      gap: {
+        // 4.5: "1.rem",
+      },
       translate: {
         customTranslate: "",
       },

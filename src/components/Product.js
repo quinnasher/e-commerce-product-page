@@ -13,7 +13,9 @@ const productThumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
 
 function Product() {
   return (
-    <div className={"w-375px h-300px md:h-full  mx-auto  md:rounded-xl"}>
+    <div
+      className={"w-375px md:w-328px h-300px md:h-full  mx-auto  md:rounded-xl"}
+    >
       <ImageSlider imageUrl={productImages} thumbnailUrl={productThumbnails} />
     </div>
   );
