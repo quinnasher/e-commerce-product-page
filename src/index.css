@@ -14,6 +14,10 @@
     @apply rounded-2xl bg-orange w-full shadow-lg h-12 font-700 flex items-center justify-center text-paleOrange;
   }
 
+  li > * {
+    @apply hover:md:border-b-4 md:pb-5  hover:md:border-b-orange;
+  }
+
   @keyframes squich {
     50% {
       scale: 0.4 0.6;
